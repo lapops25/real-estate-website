@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Listings | Real Estate</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.png" alt="EstateHub Logo" class="logo-img">
+        <span>UNIZIK Estate Hub</span>
+      </a>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a class="active" href="listings.html">Listings</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h2>Property Listings</h2>
+
+    <div class="panel">
+      <div class="searchbar">
+        <input id="q" type="text" placeholder="Search by title or location..." />
+        <select id="type">
+          <option>All</option>
+          <option>House</option>
+          <option>Apartment</option>
+          <option>Land</option>
+        </select>
+        <select id="status">
+          <option>All</option>
+          <option>For Sale</option>
+          <option>For Rent</option>
+        </select>
+        <button id="apply">Apply</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+        <input id="min" type="number" placeholder="Min price (e.g. 1000000)" />
+        <input id="max" type="number" placeholder="Max price (e.g. 100000000)" />
+      </div>
+
+      <p class="note" style="margin:10px 0 0">Tip: Try searching “Awka”, “Awambia”, “Land”, etc.</p>
+    </div>
+
+    <div style="margin-top:16px" id="listingsGrid" class="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2026 UNIZIK EstateHub (School Assignment). Built with HTML, CSS & JavaScript.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Pre-fill from URL params (from Home page)
+    const url = new URL(window.location.href);
+    const q = url.searchParams.get("q");
+    const type = url.searchParams.get("type");
+    const status = url.searchParams.get("status");
+    if(q) document.getElementById("q").value = q;
+    if(type) document.getElementById("type").value = type;
+    if(status) document.getElementById("status").value = status;
+    // Trigger initial filtering after values set
+    window.addEventListener("load", () => document.getElementById("apply").click());
+  </script>
+</body>
+</html>

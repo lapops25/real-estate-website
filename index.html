@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.png" alt="EstateHub Logo" class="logo-img">
+        <span>UNIZIK Estate Hub</span>
+      </a>
+      <nav class="menu">
+        <a class="active" href="index.html">Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- ✅ CAROUSEL START -->
+<section class="hero-carousel" aria-label="Featured properties carousel">
+  <div class="hero-carousel__track" id="heroTrack">
+
+    <div class="hero-slide is-active">
+      <img src="assets/img/slide5.jpg" alt="Featured property 1">
+      <div class="hero-slide__content">
+        <h2>Premium Homes in Prime Locations</h2>
+        <p>Explore featured listings with modern designs and great accessibility.</p>
+        <a href="listings.html" class="hero-cta">Browse Listings</a>
+      </div>
+    </div>
+
+    <div class="hero-slide">
+      <img src="assets/img/slide10.jpg" alt="Featured property 2">
+      <div class="hero-slide__content">
+        <h2>Comfortable Apartments for Modern Living</h2>
+        <p>Discover well-designed apartments that combine comfort, functionality, and convenience. Ideal for professionals, small
+        families, and anyone seeking a balanced urban lifestyle.</p>
+        <a href="listings.html" class="hero-cta">View Apartments</a>
+      </div>
+    </div>
+
+    <div class="hero-slide">
+      <img src="assets/img/slide11.jpg" alt="Featured property 2">
+      <div class="hero-slide__content">
+        <h2>Well-Planned Apartments in Prime Areas</h2>
+        <p>Our apartment listings feature thoughtfully planned spaces, secure environments, and easy access to essential amenities,
+        making everyday living simple and efficient.</p>
+        <a href="listings.html" class="hero-cta">View Apartments</a>
+      </div>
+    </div>
+
+    <div class="hero-slide">
+      <img src="assets/img/slide12.jpg" alt="Featured property 2">
+      <div class="hero-slide__content">
+        <h2>Stylish Apartments Built for Comfort</h2>
+        <p>Explore contemporary apartments with spacious interiors, modern finishes, and excellent location advantages. Designed to
+        meet both comfort and lifestyle needs.</p>
+        <a href="listings.html" class="hero-cta">View Apartments</a>
+      </div>
+    </div>
+
+    <div class="hero-slide">
+      <img src="assets/img/slide13.jpg" alt="Featured property 2">
+      <div class="hero-slide__content">
+        <h2>Apartments That Fit Your Lifestyle</h2>
+        <p>From compact studios to spacious flats, our apartments offer comfort, accessibility, and value in carefully selected
+        locations</p>
+        <a href="listings.html" class="hero-cta">View Apartments</a>
+      </div>
+    </div>
+
+    <div class="hero-slide">
+      <img src="assets/img/slide14.jpg" alt="Featured property 3">
+      <div class="hero-slide__content">
+        <h2>Smart Apartment Living Made Easy</h2>
+        <p>Find apartments that offer the perfect blend of location, comfort, and affordability, tailored for modern city living.</p>
+        <a href="listings.html" class="hero-cta">View Property</a>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="hero-nav hero-prev" id="heroPrev" aria-label="Previous slide">‹</button>
+  <button class="hero-nav hero-next" id="heroNext" aria-label="Next slide">›</button>
+
+  <div class="hero-dots" id="heroDots" aria-label="Slide dots"></div>
+</section>
+
+  <!-- ✅ CAROUSEL END -->
+
+
+  <main class="container hero">
+    <div class="hero-grid">
+      <div class="panel">
+        <h1>Find a home you’ll love.</h1>
+        <p>
+          <p>
+            Finding the right property should be simple, transparent, and stress-free. UNIZIK Estate Hub is a responsive real estate web application created as an academic
+            project to demonstrate frontend web development skills. The website enables
+            users to search and filter property listings, view detailed information for
+            each property, and interact with a clean and intuitive interface. The project
+            focuses on structure, design consistency, and basic client-side interactivity.
+          </p>
+
+        </p>
+
+        <div class="searchbar">
+          <input id="homeSearch" type="text" placeholder="Search by city or property name..." />
+          <select id="homeType">
+            <option>All</option>
+            <option>House</option>
+            <option>Apartment</option>
+            <option>Land</option>
+          </select>
+          <select id="homeStatus">
+            <option>All</option>
+            <option>For Sale</option>
+            <option>For Rent</option>
+          </select>
+          <a href="listings.html"><button>Browse</button></a>
+        </div>
+
+        <div class="badges">
+          <span class="badge">✅ Simple UI</span>
+          <span class="badge">✅ Filter & Search</span>
+          <span class="badge">✅ Details Page</span>
+          <span class="badge">✅ Contact Form</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2 style="margin:0 0 10px">Featured</h2>
+        <p class="note">Open the listings page to see all properties and filters.</p>
+        <div class="badges">
+          <span class="badge">Ifite Awka • Duplex</span>
+          <span class="badge">Ngozika Estate • Luxury</span>
+          <span class="badge">Amawbia • Detached</span>
+        </div>
+        <div style="margin-top:14px">
+          <a href="listings.html"><button style="width:100%">View Listings</button></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="section">
+    <div class="container">
+      <h2>Popular Categories</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-body">
+            <div style="font-weight:800;font-size:18px">Houses</div>
+            <p class="note">Family homes, duplexes, detached houses.</p>
+            <a href="listings.html" class="tag">Explore</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div style="font-weight:800;font-size:18px">Apartments</div>
+            <p class="note">Studios, flats, and serviced apartments.</p>
+            <a href="listings.html" class="tag">Explore</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div style="font-weight:800;font-size:18px">Land</div>
+            <p class="note">Plots for residential and commercial development.</p>
+            <a href="listings.html" class="tag">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2026 UNIZIK EstateHub (School Assignment). Built with HTML, CSS & JavaScript.</small>
+    </div>
+  </footer>
+
+  <script>
+    // Optional: pass home search selections to listings via URL params (simple)
+    const homeSearch = document.getElementById("homeSearch");
+    const homeType = document.getElementById("homeType");
+    const homeStatus = document.getElementById("homeStatus");
+    const browseBtn = document.querySelector('a[href="listings.html"]');
+
+    browseBtn.addEventListener("click", (e) => {
+      const q = encodeURIComponent(homeSearch.value || "");
+      const t = encodeURIComponent(homeType.value || "All");
+      const s = encodeURIComponent(homeStatus.value || "All");
+      browseBtn.href = `listings.html?q=${q}&type=${t}&status=${s}`;
+    });
+  </script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
