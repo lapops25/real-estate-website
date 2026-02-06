@@ -71,7 +71,7 @@ img{
   width:min(1100px, 92%)
   ;margin:0 auto
 }
-.nav{
+.navbar{
   position:sticky;top:0;z-index:50;
   background:rgba(11,18,32,.85);
   border-bottom:1px solid var(--line);
@@ -98,17 +98,17 @@ img{
   outline: 1px solid red;
   box-shadow: var(--shadow);
 }
-.menu{
+.nav-links{
   display:flex;
   gap:16px;
   align-items:center
 }
-.menu a{
+.nav-links a{
   padding:8px 10px;
   border-radius:10px;
   color:var(--muted)
 }
-.menu a:hover,.menu a.active{
+.nav-links a:hover,.nav-links a.active{
   background:rgba(79,140,255,.12);
   color:var(--text)
 }
@@ -273,6 +273,27 @@ button:hover{
   .hero h1{font-size:34px}
 }
 
+@media (max-width: 768px) {
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand span {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand span {
+    font-size: 0.85rem;
+  }
+}
 /* ===== FULL-WIDTH HERO CAROUSEL ===== */
 .hero-carousel {
   height: clamp(380px, 55vh, 620px);
@@ -405,6 +426,49 @@ button:hover{
   background: rgba(255, 255, 255, .9);
 }
 
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #0b1220;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    z-index: 1000;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
 @media (max-width: 520px) {
   .hero-carousel {
     height: 62vh;

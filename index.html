@@ -15,19 +15,28 @@
 </head>
 
 <body>
-  <header class="nav">
+  <header class="navbar">
     <div class="container nav-inner">
+  
       <a class="brand" href="index.html">
         <img src="assets/img/logo.png" alt="EstateHub Logo" class="logo-img">
         <span>UNIZIK Estate Hub</span>
       </a>
-      <nav class="menu">
-        <a class="active" href="index.html">Home</a>
+  
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
         <a href="listings.html">Listings</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
-    </div>
+  
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+    </div> 
   </header>
   
   <!-- ✅ CAROUSEL START -->
@@ -192,21 +201,39 @@
     </div>
   </footer>
 
-  <script>
-    // Optional: pass home search selections to listings via URL params (simple)
-    const homeSearch = document.getElementById("homeSearch");
-    const homeType = document.getElementById("homeType");
-    const homeStatus = document.getElementById("homeStatus");
-    const browseBtn = document.querySelector('a[href="listings.html"]');
 
-    browseBtn.addEventListener("click", (e) => {
-      const q = encodeURIComponent(homeSearch.value || "");
-      const t = encodeURIComponent(homeType.value || "All");
-      const s = encodeURIComponent(homeStatus.value || "All");
+<script>
+  // Home search → listings (safe guard added)
+  const homeSearch = document.getElementById("homeSearch");
+  const homeType = document.getElementById("homeType");
+  const homeStatus = document.getElementById("homeStatus");
+  const browseBtn = document.querySelector('a[href="listings.html"]');
+
+  if (browseBtn) {
+    browseBtn.addEventListener("click", () => {
+      const q = encodeURIComponent(homeSearch?.value || "");
+      const t = encodeURIComponent(homeType?.value || "All");
+      const s = encodeURIComponent(homeStatus?.value || "All");
       browseBtn.href = `listings.html?q=${q}&type=${t}&status=${s}`;
     });
-  </script>
-  <script src="assets/js/app.js"></script>
+  }
+</script>
+
+<script src="assets/js/app.js"></script>
+
+<!-- <script>
+  // Hamburger menu
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+</script> -->
+
+
 
 </body>
 
